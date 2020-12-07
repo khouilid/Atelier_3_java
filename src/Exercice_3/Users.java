@@ -8,6 +8,7 @@ import java.util.HashMap;
 public class Users {
 
     private ArrayList<HashMap<String, String>> users  = new ArrayList<>();
+
     final double tauxInteret;
 
     public Users(double tauxInteret) {
@@ -25,8 +26,6 @@ public class Users {
         String interest =  interests.format(Integer.parseInt(userInfo.get(2)) * this.tauxInteret);
 
         user.put("Interest" , interest);
-
-
         users.add(user);
 
     }

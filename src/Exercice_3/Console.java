@@ -1,6 +1,4 @@
 package Exercice_3;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -15,19 +13,15 @@ abstract class Console {
         for (String exercice : exercices){
             System.out.println(exercice);
         }
-
         System.out.print("Your order : ");
 
-        int userChoice = input.nextInt();
-
-        return userChoice;
+        return input.nextInt();
     }
 
     protected HashMap<String,Double> getMoneyOrder(){
         HashMap<String, Double> data = new HashMap<>();
         System.out.print("User name : ");
         String name = input.next();
-
         System.out.print("How much money you want : ");
         double amount = input.nextDouble();
         data.put(name, amount);
@@ -36,8 +30,7 @@ abstract class Console {
 
     protected String getnameToFind(){
         System.out.print("User name : ");
-        String name = input.next();
-        return name;
+        return input.next();
     }
 
     protected ArrayList<String> userInfo(){
