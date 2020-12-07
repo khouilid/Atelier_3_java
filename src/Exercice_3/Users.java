@@ -1,5 +1,6 @@
 package Exercice_3;
 
+import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,15 +14,15 @@ public class Users {
         this.tauxInteret = tauxInteret;
     }
 
-    public void addUser(String name, String adrress, String sold){
+    public void addUser(ArrayList<String> userInfo){
         HashMap<String , String> user = new HashMap<>();
 
-        user.put("Name" , name.toUpperCase());
-        user.put("Adrress" , adrress);
-        user.put("Sold" , sold);
+        user.put("Name" , userInfo.get(0).toUpperCase());
+        user.put("Adrress" , userInfo.get(1));
+        user.put("Sold" , userInfo.get(2));
 
         DecimalFormat interests = new DecimalFormat("#.##");
-        String interest =  interests.format(Integer.parseInt(sold) * this.tauxInteret);
+        String interest =  interests.format(Integer.parseInt(userInfo.get(2)) * this.tauxInteret);
 
         user.put("Interest" , interest);
 
@@ -40,7 +41,7 @@ public class Users {
         return null;
     }
 
-    public ArrayList<HashMap<String, String>> allUsers(){
+    public  ArrayList<HashMap<String, String>> allUsers(){
         return users;
     }
 
