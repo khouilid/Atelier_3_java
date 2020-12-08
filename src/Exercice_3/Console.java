@@ -4,9 +4,10 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 abstract class Console {
-    Scanner input = new Scanner(System.in);
+    private static Scanner input = new Scanner(System.in);
 
-    public int mainOrder(){
+
+    protected int mainOrder(){
         String[] exercices = {"1 -> Add user", "2 -> Search for user",
                 "3 -> Display all users" , "4 -> Retirer money"};
 
@@ -28,7 +29,7 @@ abstract class Console {
         return data;
     }
 
-    protected String getnameToFind(){
+    protected String getNameToFind(){
         System.out.print("User name : ");
         return input.next();
     }

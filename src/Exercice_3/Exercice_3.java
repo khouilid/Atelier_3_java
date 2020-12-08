@@ -2,7 +2,6 @@ package Exercice_3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class Exercice_3 extends Console{
 
@@ -44,7 +43,8 @@ public class Exercice_3 extends Console{
     }
 
     private void searchForUser(){
-        String name = getnameToFind();
+        String name = getNameToFind();
+
         HashMap<String,String> result =  users.searchForUser(name);
         System.out.println(result.get("Name") + " | " + result.get("Adrress")
                 + " | " + result.get("Sold")+ " | " + result.get("Interest"));

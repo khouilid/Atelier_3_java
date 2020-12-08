@@ -60,7 +60,7 @@ public class Users {
 
                 sold = sold - amount;
                 user.put("Sold", Double.toString(sold));
-                message = "You get " + amount + "The new sold for " + user.get("Name") + " is " + sold;
+                message = "You get " + amount + "DH, The new sold for " + user.get("Name") + " is " + sold + "DH.";
                 users.set(index, user);
 
             }

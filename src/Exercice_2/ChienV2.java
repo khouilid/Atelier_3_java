@@ -1,13 +1,12 @@
 package Exercice_2;
 
-import java.util.Locale;
 import java.util.Scanner;
 
-public class Exercice_2 {
+public class ChienV2 {
     private String name;
     protected Scanner input = new Scanner(System.in);
 
-    public Exercice_2(){
+    public ChienV2(){
 
         this.name = askFordogName();
         String angryDog = angreyDog();

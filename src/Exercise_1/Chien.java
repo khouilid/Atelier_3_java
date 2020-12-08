@@ -2,10 +2,10 @@ package Exercise_1;
 
 import java.util.Scanner;
 
-public class Exercise_1 {
+public class Chien {
     private String name;
 
-    public Exercise_1(){
+    public Chien(){
 
         this.name = askFordogName();
         aboyer();
